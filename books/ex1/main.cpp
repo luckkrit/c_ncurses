@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include <ctype.h>
 
+#define COUNT 5
+
 int main()
 {
     initscr();
@@ -81,17 +83,71 @@ int main()
     // printw("That will be $%.2f!",uni*pieces);
     // refresh();
 
-    attron(A_BOLD);
-    addstr("Twinkle, twinkle little star\n");
-    attron(A_BLINK);
-    addstr("How I wonder what you are.\n");
-    attroff(A_BOLD);
-    addstr("Up above the world so high, \n");
-    addstr("Like a diamond in the sky.\n");
-    attrset(A_NORMAL);
-    addstr("Twinkle, twinkle little star\n");
-    addstr("How I wonder what you are.\n");
+    // attron(A_BOLD);
+    // addstr("Twinkle, twinkle little star\n");
+    // attron(A_BLINK);
+    // addstr("How I wonder what you are.\n");
+    // attroff(A_BOLD);
+    // addstr("Up above the world so high, \n");
+    // addstr("Like a diamond in the sky.\n");
+    // attrset(A_NORMAL);
+    // addstr("Twinkle, twinkle little star\n");
+    // addstr("How I wonder what you are.\n");
+    // refresh();
+
+    
+    // char text[COUNT][10] = {
+    //     "Do", "you", "find", "this", "silly?"
+    // };
+    // int a,b;
+    // for(a=0;a<COUNT;a++){
+    //     for(b=0;b<COUNT;b++){
+    //         if(b==a) attrset(A_BOLD|A_UNDERLINE);
+    //         printw("%s",text[b]);
+    //         if(b==a) attroff(A_BOLD|A_UNDERLINE);
+    //         addch(' ');
+    //     }
+    //     addstr("\b\n");
+    // }
+    // refresh();
+
+    // if(!has_colors()){
+    //     endwin();
+    //     puts("Terminal cannot do colors");
+    //     return(1);
+    // }
+    // if(start_color()!=OK){
+    //     endwin();
+    //     puts("Unable to start colors.");
+    //     return(1);
+    // }
+    // printw("Colors initialized.\n");
+    // printw("%d colors available.\n", COLORS);
+    // printw("%d colors pairs.\n", COLOR_PAIRS);
+    // refresh();
+
+    // start_color();
+    // init_pair(1,COLOR_YELLOW,COLOR_RED);
+    // addstr("Normal text\n");
+    // attrset(COLOR_PAIR(1));
+    // addstr("Colored text. Wee!\n");
+    // attrset(A_NORMAL);
+    // addstr("Back to normal.");
+    // refresh();
+
+    start_color();
+    init_pair(1, COLOR_BLACK, COLOR_RED);
+    init_pair(2, COLOR_YELLOW,COLOR_BLACK);
+    attrset(COLOR_PAIR(1));
+    addstr("I am Mr. Black!\n");
+    attrset(COLOR_PAIR(2));
+    addstr("I am Mr. Yellow!\n");
+    attrset(COLOR_PAIR(1) | A_BOLD);
+    addstr("I'm feeling bold!\n");
+    attrset(COLOR_PAIR(2) | A_BOLD);
+    addstr("Me too!");
     refresh();
+
 
     getch();
     endwin();

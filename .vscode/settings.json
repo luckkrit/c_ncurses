@@ -1,4 +1,6 @@
 {
     "vim.smartRelativeLine": true,
-    "editor.lineNumbers": "relative"
+    "editor.lineNumbers": "relative",
+    "terminal.integrated.copyOnSelection": true,
+    "vim.useSystemClipboard": true
 }
