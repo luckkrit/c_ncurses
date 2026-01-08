@@ -3,7 +3,10 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-#define COUNT 5
+// #define COUNT 5
+
+#define PINK 1
+
 
 int main()
 {
@@ -95,7 +98,7 @@ int main()
     // addstr("How I wonder what you are.\n");
     // refresh();
 
-    
+
     // char text[COUNT][10] = {
     //     "Do", "you", "find", "this", "silly?"
     // };
@@ -135,19 +138,95 @@ int main()
     // addstr("Back to normal.");
     // refresh();
 
-    start_color();
-    init_pair(1, COLOR_BLACK, COLOR_RED);
-    init_pair(2, COLOR_YELLOW,COLOR_BLACK);
-    attrset(COLOR_PAIR(1));
-    addstr("I am Mr. Black!\n");
-    attrset(COLOR_PAIR(2));
-    addstr("I am Mr. Yellow!\n");
-    attrset(COLOR_PAIR(1) | A_BOLD);
-    addstr("I'm feeling bold!\n");
-    attrset(COLOR_PAIR(2) | A_BOLD);
-    addstr("Me too!");
-    refresh();
+    // start_color();
+    // init_pair(1, COLOR_BLACK, COLOR_RED);
+    // init_pair(2, COLOR_YELLOW,COLOR_BLACK);
+    // attrset(COLOR_PAIR(1));
+    // addstr("I am Mr. Black!\n");
+    // attrset(COLOR_PAIR(2));
+    // addstr("I am Mr. Yellow!\n");
+    // attrset(COLOR_PAIR(1) | A_BOLD);
+    // addstr("I'm feeling bold!\n");
+    // attrset(COLOR_PAIR(2) | A_BOLD);
+    // addstr("Me too!");
+    // refresh();
 
+    // start_color();
+    // if(!can_change_color()){
+    //     addstr("This probably won't work...\n");
+    // }
+
+    // init_color(PINK, 1000,750,750);
+    // init_pair(1,PINK,COLOR_BLACK);
+    // attrset(COLOR_PAIR(1));
+    // printw("This is the new color%d.\n", PINK);
+    // refresh();
+
+    // start_color();
+    // init_pair(1, COLOR_WHITE,COLOR_BLUE);
+    // addstr("This is some text");
+    // // bkgd(COLOR_PAIR(1));
+    // // bkgd('.');
+    // // bkgd(COLOR_PAIR(1)|'.');
+    // refresh();
+
+    // start_color();
+    // init_pair(1, COLOR_WHITE,COLOR_BLUE);
+    // init_pair(2, COLOR_GREEN,COLOR_WHITE);
+    // init_pair(3, COLOR_RED,COLOR_GREEN);
+    // bkgd(COLOR_PAIR(1));
+    // addstr("I think that I shall never see\n");
+    // addstr("a color screen as pretty as thee.\n");
+    // addstr("For seasons may change\n");
+    // addstr("and storms may thunder;\n");
+    // addstr("But color text shall always wonder.");
+    // refresh();
+    // getch();
+
+    // bkgd(COLOR_PAIR(2));
+    // refresh();
+    // getch();
+
+    // bkgd(COLOR_PAIR(3));
+    // refresh();
+    // getch();
+
+    // addstr("Attention!\n");
+    // beep();
+    // refresh();
+
+    // addstr("I said, ATTENTION!\n");
+    // flash();
+    // refresh();
+
+    // addch('c');
+    // addch(A_BOLD | 'a');
+    // addch(A_REVERSE | 't');
+    // refresh();
+
+    // addch('c');
+    // addch(A_BOLD | 'a');
+    // addch(A_REVERSE | 't');
+    // refresh();
+
+    // move(0,2);
+    // // addch('r');
+    // addch('r' | A_REVERSE);
+    // refresh();
+
+    // addch(A_ALTCHARSET | ACS_PI);
+    // addstr(" = 3.14159");
+    // refresh();
+
+    // for(int a=0;a<127;a++){
+    //     printw("\t%2X:", a);
+    //     addch(A_ALTCHARSET | a);
+    // }
+    // refresh();
+
+    attrset(A_ALTCHARSET);
+    addstr("Hello there!");
+    refresh();
 
     getch();
     endwin();
