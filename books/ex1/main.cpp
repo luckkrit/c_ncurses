@@ -7,7 +7,6 @@
 
 #define PINK 1
 
-
 int main()
 {
     initscr();
@@ -97,7 +96,6 @@ int main()
     // addstr("Twinkle, twinkle little star\n");
     // addstr("How I wonder what you are.\n");
     // refresh();
-
 
     // char text[COUNT][10] = {
     //     "Do", "you", "find", "this", "silly?"
@@ -253,6 +251,18 @@ int main()
     //     addch(string[x]);
     //     x++;
     // }
+    // refresh();
+
+    // chtype string[] = {
+    //     'H' | A_BOLD, 'e', 'l' | A_REVERSE,
+    //     'l' | A_REVERSE, 'o', '!' | A_UNDERLINE, 0};
+    
+    // addchstr(string);
+    // refresh();
+
+    // char box[] = "lqk\nx x\nmqj\n";
+    // attrset(A_ALTCHARSET);
+    // addstr(box);
     // refresh();
 
     getch();
